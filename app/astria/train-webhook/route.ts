@@ -149,6 +149,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         message: "success",
+        redirectUrl: "/",
       },
       { status: 200, statusText: "Success" }
     );
