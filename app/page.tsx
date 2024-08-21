@@ -4,7 +4,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 
 import hero from "/public/hero.png";
-
+import Faq from "@/components/Faq";
 import { Button } from "@/components/ui/button";
 import ExplainerSection from "@/components/ExplainerSection";
 import PricingSection from "@/components/PricingSection";
@@ -58,6 +58,7 @@ export default async function Index() {
       </div>
       <ExplainerSection />
       <PricingSection />
+      <Faq />
     </div>
   );
 }
