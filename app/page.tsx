@@ -27,18 +27,17 @@ export default async function Index() {
       <div className="flex flex-col lg:flex-row items-center gap-8 p-8 max-w-6xl w-full">
         <div className="flex flex-col space-y-4 lg:w-1/2 w-full">
           <h1 className="text-5xl font-bold ">
-            Sesión de fotos <br />
-            usando IA✨
+            Professionele portetfoto's <br />
+            met behulp van AI✨
           </h1>
           <p className="text-gray-600 text-xl">
-            Genere fotografías de retratos profesionales de negocios con calidad
-            de estudio HD que son mucho más baratos y no requieren tiempo ni
-            desplazamientos, fácilmente desde casa o trabajo.
+            Genereer professionele zakelijke portretfoto's van studiokwaliteit
+            in HD, eenvoudig vanuit huis of werk.
           </p>
           <div className="flex flex-col space-y-2">
             <Link href="/login">
               <Button className="border rounded-full  h-12 px-6 m-2 text-lg text-white bg-sky-600 hover:bg-sky-700 w-full lg:w-1/2">
-                Iniciar sesión de fotos{" "}
+                Begin fotosessie{" "}
               </Button>
             </Link>
           </div>

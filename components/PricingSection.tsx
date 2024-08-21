@@ -51,14 +51,15 @@ const pricingOptions = [
     title: "1 Credit",
 
     price: "25€",
-    description: "Perfecto para quienes buscan mejorar su presencia en línea.",
+    description:
+      "Ideaal voor degenen die hun online aanwezigheid willen verbeteren.",
     features: [
-      "1 sesión de fotos",
-      "40 fotos HD con IA",
-      "Más de 20 estilos",
-      "Listo en 30 minutos",
+      "1 fotosessie",
+      "40 HD-foto's met AI",
+      "Meer dan 20 stijlen",
+      "Klaar in 60 minuten",
     ],
-    buttonText: "Comprar ",
+    buttonText: "Kopen ",
     bgColor: "bg-white",
   },
   {
@@ -66,15 +67,15 @@ const pricingOptions = [
 
     price: "55€ ",
     description:
-      "Ideal para equipos pequeños de 3 personas que quieran mejorar su presencia online.",
+      "Ideaal voor kleine teams van 3 personen die hun online aanwezigheid willen verbeteren.",
     features: [
-      "3 sesiones de fotos individuales",
-      "40 fotos HD AI cada una",
-      "Más de 20 estilos",
-      "Listo en 30 minutos",
+      "3 individuele fotosessies",
+      "Elk 40 HD AI-foto's",
+      "Meer dan 20 stijlen",
+      "Klaar in 60 minuten",
     ],
 
-    buttonText: "Comprar ",
+    buttonText: "Kopen ",
     bgColor: "bg-blue-50",
   },
   {
@@ -82,14 +83,14 @@ const pricingOptions = [
 
     price: "95€",
     description:
-      "Ideal para equipos de 5 personas que quieran mejorar su presencia online.",
+      "Ideaal voor teams van 5 personen die hun online aanwezigheid willen verbeteren.",
     features: [
-      "5 sesiones de fotos individuales",
-      "40 fotos HD AI cada una",
-      "Más de 20 estilos",
-      "Listo en 30 minutos",
+      "5 individuele fotosessies",
+      "Elk 40 HD AI-foto's",
+      "Meer dan 20 stijlen",
+      "Klaar in 60 minuten",
     ],
-    buttonText: "Comprar ",
+    buttonText: "Kopen ",
     bgColor: "bg-white",
   },
 ];
