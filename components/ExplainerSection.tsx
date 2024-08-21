@@ -17,8 +17,8 @@ export default function ExplainerSection() {
           <h3 className="text-2xl font-semibold">Upload 4 tot 10 selfies</h3>
         </div>
         <p className="text-l text-gray-600 text-center">
-          Kijk rechtstreeks in de camera en zorg ervoor dat uw gezicht in de
-          camera zit midden van de foto. <br />
+          Kijk rechtstreeks in de camera en zorg ervoor dat uw gezicht in het
+          midden zit van de foto. <br />
           Vermijd hoeden en zonnebrillen. Zorg voor gevarieerde foto's
           verschillende achtergronden en situaties
         </p>
