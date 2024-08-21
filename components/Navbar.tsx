@@ -56,7 +56,7 @@ export default async function Navbar() {
         <Link href="/">
           <h2 className=" font-medium  text-2xl items-center   flex">
             <Image src="/logo7.png" width={30} height={30} alt="Logo" />{" "}
-            <span className="mt-1 ml-1 pb-1 px-2"> Sesiondefotos.ai</span>{" "}
+            <span className="mt-1 ml-1 pb-1 px-2"> Ai Fotosessie app</span>{" "}
           </h2>
         </Link>
       </div>
