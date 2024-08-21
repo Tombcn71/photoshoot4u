@@ -37,9 +37,12 @@ export default async function Navbar() {
   return (
     <div className="flex w-full px-4 lg:px-40 py-4 items-center border-b text-center gap-8 justify-between">
       <div className="flex gap-2 h-full">
-        <Link href="/">
-          <h2 className="font-bold">AI Fotosessie app</h2>
-        </Link>
+        <a href="/">
+          <h2 className=" font-medium  text-2xl items-center   flex">
+            <img src="/logo7.png" width={30} height={30} alt="Logo" />{" "}
+            <span className="mt-1 ml-1 pb-1 px-2"> AI Fotosessie</span>{" "}
+          </h2>
+        </a>
       </div>
       {user && (
         <div className="hidden lg:flex flex-row gap-2">

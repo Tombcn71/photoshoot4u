@@ -6,8 +6,8 @@ import { Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
-  title: "Headshots AI",
-  description: "Generate awesome headshots in minutes using AI",
+  title: "AIFotosessie.app",
+  description: "Zakelijke portetfoto's met behulp van AI",
 };
 
 export default function RootLayout({ children }: any) {
@@ -18,8 +18,7 @@ export default function RootLayout({ children }: any) {
           <Suspense
             fallback={
               <div className="flex w-full px-4 lg:px-40 py-4 items-center border-b text-center gap-8 justify-between h-[69px]" />
-            }
-          >
+            }>
             <Navbar />
           </Suspense>
         </section>
