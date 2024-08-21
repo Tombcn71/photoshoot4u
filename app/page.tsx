@@ -45,7 +45,7 @@ export default async function Index() {
         </div>
         <div className="lg:w-1/2 w-full mt-8 lg:mt-0">
           <img
-            src={herox.src}
+            src={hero.src}
             alt="AI Headshot Illustration"
             className="rounded-lg object-cover w-full h-full"
           />
