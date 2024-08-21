@@ -40,8 +40,9 @@ export const Login = ({
       setTimeout(() => {
         setIsSubmitting(false);
         toast({
-          title: "Email sent",
-          description: "Check your inbox for a magic link to sign in.",
+          title: "Email enviado",
+          description:
+            "Revise su inbox para encontrar el enlace mágico para iniciar sesión.",
           duration: 5000,
         });
         setIsMagicLinkSent(true);
@@ -49,10 +50,10 @@ export const Login = ({
     } catch (error) {
       setIsSubmitting(false);
       toast({
-        title: "Something went wrong",
+        title: "Er is iets fout gegaan",
         variant: "destructive",
         description:
-          "Please try again, if the problem persists, contact us at hello@tryleap.ai",
+          "Probeer het nog eens, wanneer het niet lukt, neem dan contact met ons op",
         duration: 5000,
       });
     }
@@ -100,12 +101,26 @@ export const Login = ({
 
   return (
     <>
+      {" "}
+      <div className="  px-8 text-xl text-center">
+        <h1 className="font-bold text-3xl pb-6">👋 Hola bienvenido!</h1>
+        <div className="text-base">
+          Introduce tu email y te enviaremos uno
+          <br />
+          ✨enlace mágico✨ con el que podrás iniciar sesión. <br />
+          Después de esto podrás comprar créditos <br /> y comenzar tu sesión de
+          fotos{" "}
+        </div>
+      </div>
       <div className="flex items-center justify-center p-8">
-        <div className="flex flex-col gap-4 bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 p-4 rounded-xl max-w-sm w-full">
-          <h1 className="text-xl">Welcome</h1>
-          <p className="text-xs opacity-60">
-            Sign in or create an account to get started.
+        <div className="flex flex-col gap-4  dark:bg-neutral-900 border border-200 p-4 rounded-xl max-w-sm w-full">
+          <h1 className="text-base font-semibold	">
+            Iniciar sesión/Registrarse
+          </h1>
+          <p className=" opacity-60">
+            Inicie sesión o regístrese para comenzar.{" "}
           </p>
+          <p className="font-semibold	">Correo electrónico</p>
           {/* <Button
             onClick={signInWithGoogle}
             variant={"outline"}
@@ -118,13 +133,12 @@ export const Login = ({
 
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col gap-2"
-          >
+            className="flex flex-col gap-2">
             <div className="flex flex-col gap-4">
               <div className="flex flex-col gap-2">
                 <Input
                   type="email"
-                  placeholder="Email"
+                  placeholder="tu@ejemplo.com"
                   {...register("email", {
                     required: true,
                     validate: {
@@ -152,10 +166,9 @@ export const Login = ({
               isLoading={isSubmitting}
               disabled={isSubmitting}
               variant="outline"
-              className="w-full"
-              type="submit"
-            >
-              Continue with Email
+              className="bg-sky-600 border rounded-full  h-12 px-6 m-2 text-lg text-white"
+              type="submit">
+              enviar
             </Button>
           </form>
         </div>
