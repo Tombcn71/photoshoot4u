@@ -14,7 +14,7 @@ export default function ExplainerSection() {
           <div className="text-3xl font-bold text-sky-600 bg-white border-2 border-sky-600 rounded-full w-10 h-10 flex items-center justify-center">
             1
           </div>
-          <h3 className="text-2xl font-semibold">SUpload 4 tot 10 selfies</h3>
+          <h3 className="text-2xl font-semibold">Upload 4 tot 10 selfies</h3>
         </div>
         <p className="text-l text-gray-600 text-center">
           Kijk rechtstreeks in de camera en zorg ervoor dat uw gezicht in de
