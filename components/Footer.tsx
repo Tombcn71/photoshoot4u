@@ -11,16 +11,15 @@ function footer3() {
             <Link href="/">
               <h2 className=" font-medium  text-2xl items-center   flex">
                 <Image src="/logo7.png" width={30} height={30} alt="Logo" />{" "}
-                <span className="mt-1 ml-1 pb-1 "> Sesiondefotos.ai</span>{" "}
+                <span className="mt-1 ml-1 pb-1 "> aifotosessie.app</span>{" "}
               </h2>
             </Link>
           </div>
 
           <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
-            Nuestra misión es hacer que la fotografía de retratos con IA sea
-            accesible para todos. para hacer. Usando IA podemos reducir los
-            costos de las tradicionales reducir drásticamente las sesiones de
-            retratos y al mismo tiempo alta calidad proporcionar resultados.
+            Onze missie is om AI-portretfotografie voor iedereen toegankelijk te
+            maken. Met AI verlagen we de kosten van traditionele portretsessies
+            aanzienlijk en garanderen we tegelijkertijd foto's van topkwaliteit.
           </p>
 
           <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
