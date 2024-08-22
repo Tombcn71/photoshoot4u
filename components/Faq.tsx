@@ -138,8 +138,8 @@ export default function FAQ() {
           </summary>
 
           <p className="mt-4 leading-relaxed text-gray-700">
-            Op de resultaten zal onze AI je "aankleden" met een overhemd, een
-            pak en een blazer.
+            Op de resultaten zal onze AI je professioneel "aankleden" met een
+            overhemd, een pak en een blazer.
           </p>
         </details>
         <details className="group rounded-lg bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden">
@@ -180,7 +180,7 @@ export default function FAQ() {
           </summary>
 
           <p className="mt-4 leading-relaxed text-gray-700">
-            Je foto's hebben proffessionele grijze, witte en kantoor en gebouw
+            Je foto's hebben professionele grijze, witte en kantoor en gebouw
             achtegrond.
           </p>
         </details>
@@ -268,7 +268,7 @@ export default function FAQ() {
 
         <details className="group rounded-lg bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden">
           <summary className="flex cursor-pointer items-center justify-between gap-1.5 text-gray-900">
-            <h2 className="font-medium">Zijn mijn netalingsgegevens veilig?</h2>
+            <h2 className="font-medium">Zijn mijn betalingsgegevens veilig?</h2>
 
             <span className="relative h-5 w-5 shrink-0">
               <svg
