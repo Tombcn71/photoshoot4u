@@ -96,7 +96,8 @@ export default function FAQ() {
           <p className="mt-4 leading-relaxed text-gray-700">
             Gelijk aan een echte fotosessie is niet iedere foto een topper. Waar
             je bij een traditionele fotosessie 1 tot 2 goede foto's krijgt,
-            kunnen wij je er 3 tot 6 garanderen.
+            kunnen wij je er 3 tot 6 garanderen. We zullen je de hele batch van
+            40 foto;s tonen zodat je zelf de beste kunt jiezen.
           </p>
         </details>
         <details className="group rounded-lg bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden">

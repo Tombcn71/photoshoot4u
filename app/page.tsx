@@ -36,7 +36,7 @@ export default async function Index() {
           </p>
           <div className="flex flex-col space-y-2">
             <Link href="/login">
-              <Button className="border rounded-full  h-12 px-6 m-2 text-lg text-white bg-sky-600 hover:bg-sky-700 w-full lg:w-1/2">
+              <Button className="border  h-12 px-6 m-2 text-lg text-white bg-sky-600 hover:bg-sky-700 w-full lg:w-1/2">
                 Begin fotosessie{" "}
               </Button>
             </Link>

@@ -4,6 +4,8 @@ import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
 import { Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
+const CrispWithNoSSR = dynamic(() => import("@/components/crisp"));
+import dynamic from "next/dynamic";
 
 export const metadata = {
   title: "AIFotosessie.app",
@@ -14,6 +16,7 @@ export default function RootLayout({ children }: any) {
   return (
     <html lang="en">
       <body className="min-h-screen flex flex-col">
+        <CrispWithNoSSR />
         <section>
           <Suspense
             fallback={
