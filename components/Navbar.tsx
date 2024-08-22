@@ -84,7 +84,7 @@ export default async function Navbar() {
         {!user && (
           <Link href="/login" className="md:block hidden">
             <Button className="text-white bg-sky-600 hover:bg-sky-700 w-full border rounded-full">
-              Iniciar sesión / Registrarse{" "}
+              Inloggen / Registreren{" "}
             </Button>
           </Link>
         )}{" "}
