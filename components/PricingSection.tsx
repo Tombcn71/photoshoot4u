@@ -50,7 +50,7 @@ const pricingOptions = [
   {
     title: "1 Credit",
 
-    price: "25€",
+    price: "17€",
     description:
       "Ideaal voor degenen die hun online aanwezigheid willen verbeteren.",
     features: [
@@ -65,9 +65,9 @@ const pricingOptions = [
   {
     title: "3 Credits",
 
-    price: "55€ ",
+    price: "37€ ",
     description:
-      "Ideaal voor kleine teams van 3 personen die hun online aanwezigheid willen verbeteren.",
+      "Meer voordeel voor kleine teams van 3 personen die hun online aanwezigheid willen verbeteren.",
     features: [
       "3 individuele fotosessies",
       "Elk 40 HD AI-foto's",
@@ -81,9 +81,9 @@ const pricingOptions = [
   {
     title: "5 Credits",
 
-    price: "95€",
+    price: "67€",
     description:
-      "Ideaal voor teams van 5 personen die hun online aanwezigheid willen verbeteren.",
+      "Meeste voordeel voor teams van 5 personen die hun online aanwezigheid willen verbeteren.",
     features: [
       "5 individuele fotosessies",
       "Elk 40 HD AI-foto's",

@@ -11,7 +11,7 @@ function footer3() {
             <Link href="/">
               <h2 className=" font-medium  text-2xl items-center   flex">
                 <Image src="/logo7.png" width={30} height={30} alt="Logo" />{" "}
-                <span className="mt-1 ml-1 pb-1 "> aifotosessie.app</span>{" "}
+                <span className="mt-1 ml-1 pb-1 "> aifotosessie.nl</span>{" "}
               </h2>
             </Link>
           </div>
