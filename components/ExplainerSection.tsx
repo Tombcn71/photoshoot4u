@@ -14,13 +14,17 @@ export default function ExplainerSection() {
           <div className="text-3xl font-bold text-sky-600 bg-white border-2 border-sky-600 rounded-full w-10 h-10 flex items-center justify-center">
             1
           </div>
-          <h3 className="text-2xl font-semibold">Upload 4 tot 10 selfies</h3>
+          <h3 className="text-2xl font-semibold">
+            Upload 4 tot 10 verschillende foto's.
+          </h3>
         </div>
         <p className="text-l text-gray-600 text-center">
-          Kijk rechtstreeks in de camera en zorg ervoor dat uw gezicht in het
-          midden zit van de foto. <br />
-          Vermijd hoeden en zonnebrillen. Zorg voor gevarieerde foto's
-          verschillende achtergronden en situaties
+          Kijk rechtstreeks in de camera en zorg ervoor dat je gezicht in het
+          midden van de foto is. <br />
+          Vermijd hoeden en zonnebrillen. Zorg voor gevarieerde foto's met
+          verschillende achtergronden, verschillende situaties, verschillende
+          outfits, gemaakt op verschillende dagen. Zoals op het voorbeeld
+          hieronder.
         </p>
         <img
           src={voorbeeld1.src}
