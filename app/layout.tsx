@@ -8,8 +8,9 @@ const CrispWithNoSSR = dynamic(() => import("@/components/crisp"));
 import dynamic from "next/dynamic";
 
 export const metadata = {
-  title: "AIFotosessie.app",
-  description: "Zakelijke portetfoto's met behulp van AI",
+  title: "Professionele portretfoto's maken met AI✨ | AIfotosessie.nl",
+  description:
+    " 👍 Ideaal voor sociale profielen, cv's en professionele cv's, makkelijk vanuit thuis of je werk, zonder studio of fotograaf",
 };
 
 export default function RootLayout({ children }: any) {

@@ -32,8 +32,8 @@ export default async function Index() {
           </h1>
           <p className="text-gray-600 text-xl">
             👍Ideaal voor sociale profielen, websites, cv's en professionele
-            portfolio's, zonder studio of fotograaf, makkelijk vanaf thuis of je
-            werk!
+            portfolio's, makkelijk vanaf thuis of je werk, zonder studio of
+            fotograaf!
           </p>
           <div className="flex flex-col space-y-2">
             <Link href="/login">
