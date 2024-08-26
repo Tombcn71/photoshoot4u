@@ -50,24 +50,23 @@ const pricingOptions = [
   {
     title: "1 Credit",
 
-    price: "17€",
-    description:
-      "Ideaal voor degenen die hun online aanwezigheid willen verbeteren.",
+    price: "29€",
+    description: "1 fotosessie voor 1 persoon.",
     features: [
       "1 fotosessie",
       "40 HD-foto's met AI",
       "Meer dan 20 stijlen",
       "Klaar in 60 minuten",
     ],
-    buttonText: "Kopen ",
+    buttonText: "Selecteer ",
     bgColor: "bg-white",
   },
   {
     title: "3 Credits",
 
-    price: "37€ ",
+    price: "59€ ",
     description:
-      "Meer voordeel voor kleine teams van 3 personen die hun online aanwezigheid willen verbeteren.",
+      "Voordeel, 3 fotosessies ook te gebruiken voor meerdere personen",
     features: [
       "3 individuele fotosessies",
       "Elk 40 HD AI-foto's",
@@ -75,22 +74,22 @@ const pricingOptions = [
       "Klaar in 60 minuten",
     ],
 
-    buttonText: "Kopen ",
+    buttonText: "Selecteer ",
     bgColor: "bg-blue-50",
   },
   {
     title: "5 Credits",
 
-    price: "67€",
+    price: "99€",
     description:
-      "Meeste voordeel voor teams van 5 personen die hun online aanwezigheid willen verbeteren.",
+      "meeste voordeel, 5 fotosessies ook te gebruiken voor meerdere personen",
     features: [
       "5 individuele fotosessies",
       "Elk 40 HD AI-foto's",
       "Meer dan 20 stijlen",
       "Klaar in 60 minuten",
     ],
-    buttonText: "Kopen ",
+    buttonText: "Selecteer ",
     bgColor: "bg-white",
   },
 ];

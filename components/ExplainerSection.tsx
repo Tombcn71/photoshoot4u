@@ -19,12 +19,15 @@ export default function ExplainerSection() {
           </h3>
         </div>
         <p className="text-l text-gray-600 text-center">
-          Kijk rechtstreeks in de camera en zorg ervoor dat je gezicht in het
-          midden van de foto is. <br />
-          Vermijd hoeden en zonnebrillen. Zorg voor gevarieerde foto's met
-          verschillende achtergronden, verschillende situaties, verschillende
-          outfits, gemaakt op verschillende dagen. Zoals op het voorbeeld
-          hieronder.
+          Zorg ervoor dat je gezicht in het midden van de foto is en dat je naar
+          de camera kijkt. <br />
+          Vermijd hoeden en zonnebrillen. Trek geen gekke gezichten(duckfaces
+          etc) <br />
+          Zorg voor gevarieerde foto's met verschillende achtergronden,
+          <br />
+          verschillende situaties, verschillende outfits, gemaakt op
+          verschillende dagen.
+          <br /> Zoals op het voorbeeld hieronder.
         </p>
         <img
           src={voorbeeld1.src}
@@ -41,8 +44,9 @@ export default function ExplainerSection() {
           <h3 className="text-2xl font-semibold">Onze AI gaat aan de slag</h3>
         </div>
         <p className="text-l text-gray-600 text-center">
-          De AI zal 30 minuten bezig zijn, als deze klaar is ontvang je deze een
-          e-mail{" "}
+          De AI training duurt ongeveer 60 minuten, als deze klaar is ontvang je
+          een e-mail,
+          <br /> klik op de link in de e-mail.{" "}
         </p>
         <img
           src={wazig1.src}

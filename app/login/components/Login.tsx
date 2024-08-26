@@ -103,24 +103,18 @@ export const Login = ({
     <>
       {" "}
       <div className="  px-8 text-xl text-center">
-        <h1 className="font-bold text-3xl pb-6">👋 Hola bienvenido!</h1>
+        <h1 className="font-bold text-3xl pb-6">👋 Hallo welkom!</h1>
         <div className="text-base">
-          Introduce tu email y te enviaremos uno
-          <br />
-          ✨enlace mágico✨ con el que podrás iniciar sesión. <br />
-          Después de esto podrás comprar créditos <br /> y comenzar tu sesión de
-          fotos{" "}
+          Vul je e-mailadres in en wij sturen je een <br />
+          ✨magic link✨ waarmee je kunt inloggen. <br /> Hierna kun je credits
+          kopen en je fotosessie starten
         </div>
       </div>
       <div className="flex items-center justify-center p-8">
         <div className="flex flex-col gap-4  dark:bg-neutral-900 border border-200 p-4 rounded-xl max-w-sm w-full">
-          <h1 className="text-base font-semibold	">
-            Iniciar sesión/Registrarse
-          </h1>
-          <p className=" opacity-60">
-            Inicie sesión o regístrese para comenzar.{" "}
-          </p>
-          <p className="font-semibold	">Correo electrónico</p>
+          <h1 className="text-base font-semibold	">Inloggen/Registreren</h1>
+          <p className=" opacity-60">Login of registreer je. </p>
+          <p className="font-semibold	">e-mail</p>
           {/* <Button
             onClick={signInWithGoogle}
             variant={"outline"}
@@ -138,7 +132,7 @@ export const Login = ({
               <div className="flex flex-col gap-2">
                 <Input
                   type="email"
-                  placeholder="tu@ejemplo.com"
+                  placeholder="jij@voorbeeld.com"
                   {...register("email", {
                     required: true,
                     validate: {
@@ -168,7 +162,7 @@ export const Login = ({
               variant="outline"
               className="bg-sky-600 border rounded-full  h-12 px-6 m-2 text-lg text-white"
               type="submit">
-              enviar
+              versturen
             </Button>
           </form>
         </div>
