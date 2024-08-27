@@ -22,17 +22,6 @@ function footer3() {
             aanzienlijk en garanderen we tegelijkertijd foto's van topkwaliteit.
           </p>
 
-          <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
-            <Link
-              href="/precio
-            ">
-              Precio
-            </Link>
-            <Link href="/faq">Faq</Link>
-            <Link href="/blog">Blog</Link>
-            <Link href="/contacto">Contacto</Link>{" "}
-          </ul>
-
           <ul className="mt-12 flex justify-center gap-6 md:gap-8">
             <Link
               href="https://www.instagram.com/AiFotosessie.nl/"

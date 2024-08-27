@@ -5,8 +5,8 @@ import resultaat1 from "/public/resultaat1.png";
 export default function ExplainerSection() {
   return (
     <div
-      id="Zo werkt het"
-      className="w-full max-w-6xl mt-16  px-6 p-8 bg-gray-100 rounded-lg space-y-8">
+      id="Hoe"
+      className="w-full scroll-smooth max-w-6xl mt-16  px-6 p-8 bg-gray-100 rounded-lg space-y-8">
       {/* Step 1: Upload your images */}{" "}
       <h2 className="text-3xl  font-bold text-center mb-8">Hoe werkt het?</h2>
       <div className="space-y-4">

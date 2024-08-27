@@ -2,7 +2,6 @@ import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import Link from "next/link";
 import { redirect } from "next/navigation";
-
 import hero from "/public/hero.png";
 import Faq from "@/components/Faq";
 import { Button } from "@/components/ui/button";
@@ -37,7 +36,7 @@ export default async function Index() {
           </p>
           <div className="flex flex-col space-y-2">
             <Link href="/login">
-              <Button className="border  h-12 px-6 m-2 text-lg text-white bg-sky-600 hover:bg-sky-700 w-full lg:w-1/2">
+              <Button className="border rounded-full h-12 px-6 m-2 text-lg text-white bg-sky-600 hover:bg-sky-700 w-full lg:w-1/2">
                 Begin fotosessie{" "}
               </Button>
             </Link>
@@ -52,7 +51,8 @@ export default async function Index() {
         </div>
       </div>
       <ExplainerSection />
-      <PricingSection /> <Faq />
+      <Faq />
+      <PricingSection />
       <div></div>
     </div>
   );

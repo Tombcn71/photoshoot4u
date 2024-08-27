@@ -1,12 +1,12 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "@/components/ui/toaster";
+import Banner from "@/components/Banner";
 import "./globals.css";
 import { Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
 const CrispWithNoSSR = dynamic(() => import("@/components/crisp"));
 import dynamic from "next/dynamic";
-
 export const metadata = {
   title: "Professionele portretfoto's maken met AI✨ | AIfotosessie.nl",
   description:
@@ -17,6 +17,7 @@ export default function RootLayout({ children }: any) {
   return (
     <html className="scroll-smooth" lang="en">
       <body className="min-h-screen flex flex-col">
+        <Banner />
         <CrispWithNoSSR />
         <section>
           <Suspense
