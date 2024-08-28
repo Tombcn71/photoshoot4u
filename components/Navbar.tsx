@@ -60,19 +60,20 @@ export default async function Navbar() {
           </h2>
         </Link>
       </div>
-      <div className="md:block hidden  lg:ml-auto align-items: flex-end;  justify-end">
-        {!user && (
+      {!user && (
+        <div className="md:block hidden  lg:ml-auto align-items: flex-end;  justify-end">
           <Link href="/#Hoe">
             <Button variant={"ghost"}>Hoe werkt het?</Button>
           </Link>
-        )}
-        <Link href="/#Faq ">
-          <Button variant={"ghost"}>Faq</Button>
-        </Link>
-        <Link href="/#Prijzen">
-          <Button variant={"ghost"}>Prijzen</Button>
-        </Link>
-      </div>
+
+          <Link href="/#Faq ">
+            <Button variant={"ghost"}>Faq</Button>
+          </Link>
+          <Link href="/#Prijzen">
+            <Button variant={"ghost"}>Prijzen</Button>
+          </Link>
+        </div>
+      )}
 
       {user && (
         <div className=" flex flex-row lg:ml-auto  gap-2 ">
