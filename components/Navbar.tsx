@@ -60,10 +60,12 @@ export default async function Navbar() {
           </h2>
         </Link>
       </div>
-      <div className="md:block hidden  lg:ml-auto align-items: flex-end; flex justify-end">
-        <Link href="/#Hoe">
-          <Button variant={"ghost"}>Hoe werkt het?</Button>
-        </Link>{" "}
+      <div className="md:block hidden  lg:ml-auto align-items: flex-end;  justify-end">
+        {!user && (
+          <Link href="/#Hoe">
+            <Button variant={"ghost"}>Hoe werkt het?</Button>
+          </Link>
+        )}
         <Link href="/#Faq ">
           <Button variant={"ghost"}>Faq</Button>
         </Link>
@@ -71,6 +73,7 @@ export default async function Navbar() {
           <Button variant={"ghost"}>Prijzen</Button>
         </Link>
       </div>
+
       {user && (
         <div className=" flex flex-row lg:ml-auto  gap-2 ">
           {stripeIsConfigured && (
