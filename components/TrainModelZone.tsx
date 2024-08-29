@@ -310,7 +310,10 @@ export default function TrainModelZone() {
             </div>
           )}
 
-          <Button type="submit" className="w-full" isLoading={isLoading}>
+          <Button
+            type="submit"
+            className=" bg-sky-600 w-full"
+            isLoading={isLoading}>
             Train Model{" "}
             {stripeIsConfigured && <span className="ml-1">(1 Credit)</span>}
           </Button>

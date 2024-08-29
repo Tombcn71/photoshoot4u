@@ -60,9 +60,11 @@ export default function ClientSideModelsList({
       {models && models.length > 0 && (
         <div className="flex flex-col gap-4">
           <div className="flex flex-row gap-4 w-full justify-between items-center text-center">
-            <h1>Your models</h1>
+            <h1>Jouw modellen</h1>
             <Link href="/overview/models/train" className="w-fit">
-              <Button size={"sm"}>Train model</Button>
+              <Button className="bg-sky-600" size={"sm"}>
+                Train model
+              </Button>
             </Link>
           </div>
           <ModelsTable models={models} />
