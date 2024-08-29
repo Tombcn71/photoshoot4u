@@ -62,7 +62,7 @@ export default function ClientSideModelsList({
           <div className="flex flex-row gap-4 w-full justify-between items-center text-center">
             <h1>Jouw modellen</h1>
             <Link href="/overview/models/train" className="w-fit">
-              <Button className="bg-sky-600" size={"sm"}>
+              <Button className="bg-sky-600 hover:bg-sky-700" size={"sm"}>
                 Train model
               </Button>
             </Link>
@@ -78,7 +78,7 @@ export default function ClientSideModelsList({
           </h1>
           <div>
             <Link href="/overview/models/train">
-              <Button className="bg-sky-600" size={"lg"}>
+              <Button className="bg-sky-600 hover:bg-sky-700" size={"lg"}>
                 Train model
               </Button>
             </Link>
