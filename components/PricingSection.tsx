@@ -8,8 +8,8 @@ export default function PricingSection() {
         Prijzen
       </h2>
       <p className="text-center">
-        🔥10€ earlybird korting op alle prijzen, vul op de betaalpagina jouw
-        actiecode 👉earlybird👈 in!
+        🔥10€ earlybird korting op alle prijzen, voeg op de betaalpagina de
+        actiecode 👉earlybird👈 toe!
       </p>
       <div className="flex flex-wrap justify-center lg:space-x-4 space-y-4 lg:space-y-0 items-stretch">
         {pricingOptions.map((option, index) => (
