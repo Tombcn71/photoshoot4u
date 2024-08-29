@@ -31,7 +31,7 @@ export default async function ModelsTable({ models }: ModelsTableProps) {
       <Table className="w-full">
         <TableHeader>
           <TableRow>
-            <TableHead>Name</TableHead>
+            <TableHead>Naam</TableHead>
             <TableHead>Status</TableHead>
             <TableHead>Type</TableHead>
             <TableHead>Samples</TableHead>
@@ -42,8 +42,7 @@ export default async function ModelsTable({ models }: ModelsTableProps) {
             <TableRow
               key={model.modelId}
               onClick={() => handleRedirect(model.id)}
-              className="cursor-pointer h-16"
-            >
+              className="cursor-pointer h-16">
               <TableCell className="font-medium">{model.name}</TableCell>
               <TableCell>
                 <div>
@@ -51,9 +50,8 @@ export default async function ModelsTable({ models }: ModelsTableProps) {
                     className="flex gap-2 items-center w-min"
                     variant={
                       model.status === "finished" ? "default" : "secondary"
-                    }
-                  >
-                    {model.status === "processing" ? "training" : model.status }
+                    }>
+                    {model.status === "processing" ? "training" : model.status}
                     {model.status === "processing" && (
                       <Icons.spinner className="h-4 w-4 animate-spin" />
                     )}
