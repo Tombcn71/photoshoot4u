@@ -312,7 +312,7 @@ export default function TrainModelZone() {
 
           <Button
             type="submit"
-            className=" bg-sky-600 w-full"
+            className=" bg-sky-600 hover:bg-sky-700 w-full"
             isLoading={isLoading}>
             Train Model{" "}
             {stripeIsConfigured && <span className="ml-1">(1 Credit)</span>}
