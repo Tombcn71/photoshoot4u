@@ -17,9 +17,7 @@ function footer3() {
           </div>
 
           <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
-            Onze missie is om AI-portretfotografie voor iedereen toegankelijk te
-            maken. Met AI verlagen we de kosten van traditionele portretsessies
-            aanzienlijk en garanderen we tegelijkertijd foto's van topkwaliteit.
+            Privacy policy.
           </p>
 
           <ul className="mt-12 flex justify-center gap-6 md:gap-8">
