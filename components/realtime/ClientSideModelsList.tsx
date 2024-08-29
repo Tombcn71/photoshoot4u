@@ -78,7 +78,9 @@ export default function ClientSideModelsList({
           </h1>
           <div>
             <Link href="/overview/models/train">
-              <Button size={"lg"}>Train model</Button>
+              <Button className="bg-sky-600" size={"lg"}>
+                Train model
+              </Button>
             </Link>
           </div>
         </div>
