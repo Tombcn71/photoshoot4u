@@ -119,7 +119,7 @@ export async function POST(request: Request) {
         from: "noreply@aifotosessie.nl",
         to: user?.email ?? "",
         subject: "Je fotosessie was succesvol",
-        html: `<h2>Je fotosessie was succesvol, klik op de link om je foto's tebekijken</h2>        <a href="https://www.aifotosessie.nl/overview" style="background-color: #0072b1 ; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px;">Bekijk foto's</a>
+        html: `<h2>Je fotosessie was succesvol, klik op de link om je foto's te bekijken</h2>        <a href="https://www.aifotosessie.nl/overview" style="background-color: #0072b1 ; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px;">Bekijk foto's</a>
 `,
       });
     }
