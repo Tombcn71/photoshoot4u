@@ -69,10 +69,9 @@ const pricingOptions = [
     title: "3 Credits",
 
     price: "59€ ",
-    description:
-      "Voordeel, 3 fotosessies ook te gebruiken voor meerdere personen",
+    description: "3 fotosessies ook te gebruiken voor verschillende personen",
     features: [
-      "3 individuele fotosessies",
+      "3 fotosessies",
       "Elk 40 HD AI-foto's",
       "Meer dan 20 stijlen",
       "Klaar in 60 minuten",
@@ -85,10 +84,9 @@ const pricingOptions = [
     title: "5 Credits",
 
     price: "99€",
-    description:
-      "meeste voordeel, 5 fotosessies ook te gebruiken voor meerdere personen",
+    description: "5 fotosessies ook te gebruiken voor verschillende personen",
     features: [
-      "5 individuele fotosessies",
+      "5 fotosessies",
       "Elk 40 HD AI-foto's",
       "Meer dan 20 stijlen",
       "Klaar in 60 minuten",

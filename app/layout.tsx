@@ -6,7 +6,9 @@ import "./globals.css";
 import { Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
 const CrispWithNoSSR = dynamic(() => import("@/components/crisp"));
+
 import dynamic from "next/dynamic";
+import { CookieConsent } from "@/components/CookieConsent";
 export const metadata = {
   title: "Professionele portretfoto's maken met AI✨ | AIfotosessie.nl",
   description:
@@ -18,7 +20,7 @@ export default function RootLayout({ children }: any) {
     <html className="scroll-smooth" lang="en">
       <body className="min-h-screen flex flex-col">
         <Banner />
-        <CrispWithNoSSR />
+        <CrispWithNoSSR /> <CookieConsent />
         <section>
           <Suspense
             fallback={
