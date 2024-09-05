@@ -5,7 +5,7 @@ export default () => {
         <p className="py-2 font-medium">
           👍 Bedankt voor je interesse in onze app! Uit waardering hiervoor
           geven we je 🔥10€ earlybird korting🔥 voeg op de betaalpagina
-          Actiecode 👉earlybird👈 toe!
+          Actiecode 👉EARLYBIRD👈 toe!
         </p>
       </div>
     </div>
