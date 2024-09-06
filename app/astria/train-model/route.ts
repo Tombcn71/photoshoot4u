@@ -144,7 +144,36 @@ export async function POST(request: Request) {
             num_images: 8,
           },
           {
+            text: `portrait of ohwx ${type} wearing a business suit, professional photo, cloudy gray background, Amazing Details, Best Quality, Masterpiece, dramatic lighting highly detailed, analog photo, overglaze, 80mm Sigma f/1.4 or any ZEISS lens`,
+            callback: promptWebhookWithParams,
+            num_images: 8,
+          },
+          {
+            text: `8k close up linkedin profile picture of ohwx
+ ${type}
+, professional jack suite, professional headshots, photo-realistic, 4k, high-resolution image, workplace settings, upper body, modern outfit, professional suit, business, blurred background, glass building, office window
+`,
+            callback: promptWebhookWithParams,
+            num_images: 8,
+          },
+          {
             text: `8k close up linkedin profile picture of ohwx ${type}, professional jack suite, professional headshots, photo-realistic, 4k, high-resolution image, workplace settings, upper body, modern outfit, professional suit, business, blurred background, glass building, office window`,
+            callback: promptWebhookWithParams,
+            num_images: 8,
+          },
+          {
+            text: ` 8k linkedin professional profile photo of ohwx
+ ${type}
+ in a suit with studio lighting, bokeh, corporate portrait headshot photograph best corporate photography photo winner, meticulous detail, hyperrealistic, centered uncropped symmetrical beautiful
+
+`,
+            callback: promptWebhookWithParams,
+            num_images: 8,
+          },
+          {
+            text: `8k professional headshot of ohwx
+ ${type}
+, crisp details, studio backdrop, executive attire, confident posture, neutral expression, high-definition, corporate setting, sharp focus, ambient lighting, business professional, cityscape view`,
             callback: promptWebhookWithParams,
             num_images: 8,
           },
