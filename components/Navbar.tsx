@@ -129,29 +129,26 @@ export default async function Navbar() {
                 <div className="overflow-anchor: none;">
                   <ul>
                     <li className="flex flex-col pt-4   ">
-                      {" "}
-                      <Link href="/prijs" className="items-cemter">
+                      <Link href="/#Hoe" className="items-cemter">
+                        <Button
+                          variant={"ghost"}
+                          className="text-l	text-align: left">
+                          Hoe werkt het?
+                        </Button>
+                      </Link>
+                      <Link href="/#Prijs" className="items-cemter">
                         <Button
                           variant={"ghost"}
                           className="text-l	text-align: left">
                           Prijs
                         </Button>
                       </Link>
-                      <Link href="/faq">
+                      <Link href="/#Faq">
                         <Button variant={"ghost"} className="text-l	">
                           Faq
                         </Button>
                       </Link>
-                      <Link href="/blog">
-                        <Button variant={"ghost"} className="text-l	">
-                          Blog
-                        </Button>
-                      </Link>{" "}
-                      <Link href="/contact">
-                        <Button variant={"ghost"} className="text-l	">
-                          Contact
-                        </Button>{" "}
-                      </Link>{" "}
+
                       <SheetClose asChild>
                         {!user && (
                           <Link href="/login" className="pl-4 pt-4">
