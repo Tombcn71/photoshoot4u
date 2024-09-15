@@ -13,17 +13,15 @@ export const WaitingForMagicLink = ({
           <h1 className="text-xl">Controleer je e-mail om door te gaan</h1>
           <div className="flex flex-col gap-2">
             <p className="text-sm">
-              Le hemos enviado por correo electrónico un enlace mágico que le
-              dará acceso a su cuenta.
+              We hebben een magic link per e-mail gestuurd deze geeft toegang
+              tot uw account.
             </p>
-            <p className="text-xs opacity-60">
-              Consejo: puede que esté en tu carpeta de spam.{" "}
-            </p>
+            <p className="text-xs opacity-60">Tip: check je spam folder. </p>
           </div>
           <div>
             <Button onClick={toggleState} variant="secondary" size="sm">
               <ArrowLeft size={14} />
-              Atras{" "}
+              Terug{" "}
             </Button>
           </div>
         </div>
