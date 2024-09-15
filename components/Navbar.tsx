@@ -136,11 +136,11 @@ export default async function Navbar() {
                           Hoe werkt het?
                         </Button>
                       </Link>
-                      <Link href="/#Prijs" className="items-cemter">
+                      <Link href="/#Prijzen" className="items-cemter">
                         <Button
                           variant={"ghost"}
                           className="text-l	text-align: left">
-                          Prijs
+                          Prijzen
                         </Button>
                       </Link>
                       <Link href="/#Faq">
