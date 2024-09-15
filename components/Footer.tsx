@@ -21,7 +21,10 @@ function footer3() {
             maken. Met AI verlagen we de kosten van traditionele portretsessies
             aanzienlijk.
           </p>
-
+          <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
+            <Link href="/Privacybeleid">Privacybeleid</Link>
+            <Link href="/Algemenevoorwaarden">Algemene voorwaarden</Link>
+          </ul>
           <ul className="mt-12 flex justify-center gap-6 md:gap-8">
             <Link
               href="https://www.instagram.com/AiFotosessie.nl/"
