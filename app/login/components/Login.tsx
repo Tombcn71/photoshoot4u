@@ -40,9 +40,9 @@ export const Login = ({
       setTimeout(() => {
         setIsSubmitting(false);
         toast({
-          title: "Email enviado",
+          title: "Email verzonden",
           description:
-            "Revise su inbox para encontrar el enlace mágico para iniciar sesión.",
+            "Controleer je inbox voor de magic link waarmee je kunt inloggen.",
           duration: 5000,
         });
         setIsMagicLinkSent(true);

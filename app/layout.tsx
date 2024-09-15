@@ -12,7 +12,7 @@ import { CookieConsent } from "@/components/CookieConsent";
 export const metadata = {
   title: "Professionele portretfoto's maken met AI✨ | AIfotosessie.nl",
   description:
-    " 👍 Ideaal voor sociale profielen, cv's en professionele cv's, makkelijk vanuit thuis of je werk, zonder studio of fotograaf",
+    " 👍 Ideaal voor sociale profielen, cv's en professionele portfolios, makkelijk vanuit thuis of je werk, zonder studio of fotograaf",
 };
 
 export default function RootLayout({ children }: any) {
