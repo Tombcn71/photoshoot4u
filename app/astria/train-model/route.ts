@@ -8,6 +8,7 @@ export const dynamic = "force-dynamic";
 
 const astriaApiKey = process.env.ASTRIA_API_KEY;
 const astriaTestModeIsOn = process.env.ASTRIA_TEST_MODE === "true";
+const packsIsEnabled = process.env.NEXT_PUBLIC_TUNE_TYPE === "packs";
 // For local development, recommend using an Ngrok tunnel for the domain
 
 const appWebhookSecret = process.env.APP_WEBHOOK_SECRET;
@@ -21,6 +22,7 @@ export async function POST(request: Request) {
   const payload = await request.json();
   const images = payload.urls;
   const type = payload.type;
+  const pack = payload.pack;
   const name = payload.name;
 
   const supabase = createRouteHandlerClient<Database>({ cookies });
@@ -116,17 +118,42 @@ export async function POST(request: Request) {
     }
   }
 
+  // create a model row in supabase
+  const { error: modelError, data } = await supabase
+    .from("models")
+    .insert({
+      user_id: user.id,
+      name,
+      type,
+    })
+    .select("id")
+    .single();
+
+  if (modelError) {
+    console.error("modelError: ", modelError);
+    return NextResponse.json(
+      {
+        message: "Something went wrong!",
+      },
+      { status: 500 }
+    );
+  }
+
+  // Get the modelId from the created model
+  const modelId = data?.id;
+
   try {
     const trainWebhook = `https://${process.env.VERCEL_URL}/astria/train-webhook`;
-    const trainWenhookWithParams = `${trainWebhook}?user_id=${user.id}&webhook_secret=${appWebhookSecret}`;
+    const trainWebhookWithParams = `${trainWebhook}?user_id=${user.id}&model_id=${modelId}&webhook_secret=${appWebhookSecret}`;
 
     const promptWebhook = `https://${process.env.VERCEL_URL}/astria/prompt-webhook`;
-    const promptWebhookWithParams = `${promptWebhook}?user_id=${user.id}&webhook_secret=${appWebhookSecret}`;
+    const promptWebhookWithParams = `${promptWebhook}?user_id=${user.id}&&model_id=${modelId}&webhook_secret=${appWebhookSecret}`;
 
     const API_KEY = astriaApiKey;
     const DOMAIN = "https://api.astria.ai";
 
-    const body = {
+    // Create a fine tuned model using Astria tune API
+    const tuneBody = {
       tune: {
         title: name,
         // Hard coded tune id of Realistic Vision v5.1 from the gallery - https://www.astria.ai/gallery/tunes
@@ -136,15 +163,10 @@ export async function POST(request: Request) {
         branch: astriaTestModeIsOn ? "fast" : "sd15",
         token: "ohwx",
         image_urls: images,
-        callback: trainWenhookWithParams,
+        callback: trainWebhookWithParams,
         prompts_attributes: [
           {
             text: `portrait of ohwx ${type} wearing a business suit, professional photo, white background, Amazing Details, Best Quality, Masterpiece, dramatic lighting highly detailed, analog photo, overglaze, 80mm Sigma f/1.4 or any ZEISS lens`,
-            callback: promptWebhookWithParams,
-            num_images: 8,
-          },
-          {
-            text: `portrait of ohwx ${type} wearing a business suit, professional photo, cloudy gray background, Amazing Details, Best Quality, Masterpiece, dramatic lighting highly detailed, analog photo, overglaze, 80mm Sigma f/1.4 or any ZEISS lens`,
             callback: promptWebhookWithParams,
             num_images: 8,
           },
@@ -153,31 +175,43 @@ export async function POST(request: Request) {
             callback: promptWebhookWithParams,
             num_images: 8,
           },
-          {
-            text: ` 8k linkedin professional profile photo of ohwx ${type} in a suit with studio lighting, bokeh, corporate portrait headshot photograph best corporate photography photo winner, meticulous detail, hyperrealistic, centered uncropped symmetrical beautiful`,
-            callback: promptWebhookWithParams,
-            num_images: 8,
-          },
-          {
-            text: `8k professional headshot of ohwx ${type}, crisp details, studio backdrop, executive attire, confident posture, neutral expression, high-definition, corporate setting, sharp focus, ambient lighting, business professional, cityscape view`,
-            callback: promptWebhookWithParams,
-            num_images: 8,
-          },
         ],
       },
     };
 
-    const response = await axios.post(DOMAIN + "/tunes", body, {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${API_KEY}`,
+    // Create a fine tuned model using Astria packs API
+    const packBody = {
+      tune: {
+        title: name,
+        name: type,
+        callback: trainWebhookWithParams,
+        prompt_attributes: {
+          callback: promptWebhookWithParams,
+        },
+        image_urls: images,
       },
-    });
+    };
 
-    const { status, statusText, data: tune } = response;
+    const response = await axios.post(
+      DOMAIN + (packsIsEnabled ? `/p/${pack}/tunes` : "/tunes"),
+      packsIsEnabled ? packBody : tuneBody,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${API_KEY}`,
+        },
+      }
+    );
+
+    const { status } = response;
 
     if (status !== 201) {
       console.error({ status });
+      // Rollback: Delete the created model if something goes wrong
+      if (modelId) {
+        await supabase.from("models").delete().eq("id", modelId);
+      }
+
       if (status === 400) {
         return NextResponse.json(
           {
@@ -195,30 +229,6 @@ export async function POST(request: Request) {
         );
       }
     }
-
-    const { error: modelError, data } = await supabase
-      .from("models")
-      .insert({
-        modelId: tune.id, // store tune Id field to retrieve workflow object if needed later
-        user_id: user.id,
-        name,
-        type,
-      })
-      .select("id")
-      .single();
-
-    if (modelError) {
-      console.error("modelError: ", modelError);
-      return NextResponse.json(
-        {
-          message: "Something went wrong!",
-        },
-        { status: 500 }
-      );
-    }
-
-    // Get the modelId from the created model
-    const modelId = data?.id;
 
     const { error: samplesError } = await supabase.from("samples").insert(
       images.map((sample: string) => ({
@@ -260,6 +270,10 @@ export async function POST(request: Request) {
     }
   } catch (e) {
     console.error(e);
+    // Rollback: Delete the created model if something goes wrong
+    if (modelId) {
+      await supabase.from("models").delete().eq("id", modelId);
+    }
     return NextResponse.json(
       {
         message: "Something went wrong!",

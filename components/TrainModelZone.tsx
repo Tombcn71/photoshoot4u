@@ -13,22 +13,30 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { useToast } from "@/components/ui/use-toast";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
-import { useCallback, useState } from "react";
+import { useCallback, useState, useEffect } from "react";
 import { useDropzone } from "react-dropzone";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { FaFemale, FaImages, FaMale, FaRainbow } from "react-icons/fa";
 import * as z from "zod";
 import { fileUploadFormSchema } from "@/types/zod";
 import { upload } from "@vercel/blob/client";
+import axios from "axios";
 
 type FormInput = z.infer<typeof fileUploadFormSchema>;
 
 const stripeIsConfigured = process.env.NEXT_PUBLIC_STRIPE_IS_ENABLED === "true";
 
-export default function TrainModelZone() {
+export default function TrainModelZone({ packSlug }: { packSlug: string }) {
   const [files, setFiles] = useState<File[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const { toast } = useToast();
@@ -56,9 +64,9 @@ export default function TrainModelZone() {
       // if user tries to upload more than 10 files, display a toast
       if (newFiles.length + files.length > 10) {
         toast({
-          title: "Te veel afbeeldingen",
+          title: "Too many images",
           description:
-            "Je kunt in totaal maximaal 10 afbeeldingen uploaden. Probeer het opnieuw.",
+            "You can only upload up to 10 images in total. Please try again.",
           duration: 5000,
         });
         return;
@@ -67,9 +75,9 @@ export default function TrainModelZone() {
       // display a toast if any duplicate files were found
       if (newFiles.length !== acceptedFiles.length) {
         toast({
-          title: "Dubbele bestandsnamen",
+          title: "Duplicate file names",
           description:
-            "Sommige van de door u geselecteerde bestanden zijn al toegevoegd. Ze werden genegeerd.",
+            "Some of the files you selected were already added. They were ignored.",
           duration: 5000,
         });
       }
@@ -80,9 +88,9 @@ export default function TrainModelZone() {
 
       if (totalSize + newSize > 4.5 * 1024 * 1024) {
         toast({
-          title: "Afbeeldingen overschrijden de maximale grootte",
+          title: "Images exceed size limit",
           description:
-            "De totale gecombineerde grootte van de afbeeldingen mag niet groter zijn dan 4,5 MB.",
+            "The total combined size of the images cannot exceed 4.5MB.",
           duration: 5000,
         });
         return;
@@ -91,8 +99,8 @@ export default function TrainModelZone() {
       setFiles([...files, ...newFiles]);
 
       toast({
-        title: "Afbeeldingen geselecteerd",
-        description: "De afbeeldingen zijn succesvol geselecteerd.",
+        title: "Images selected",
+        description: "The images were successfully selected.",
         duration: 5000,
       });
     },
@@ -127,6 +135,7 @@ export default function TrainModelZone() {
       urls: blobUrls,
       name: form.getValues("name").trim(),
       type: form.getValues("type"),
+      pack: packSlug,
     };
 
     // Send the JSON payload to the "/astria/train-model" endpoint
@@ -153,7 +162,7 @@ export default function TrainModelZone() {
         </div>
       );
       toast({
-        title: "Er is iets misgegaan!",
+        title: "Something went wrong!",
         description: responseMessage.includes("Not enough credits")
           ? messageWithButton
           : responseMessage,
@@ -163,9 +172,9 @@ export default function TrainModelZone() {
     }
 
     toast({
-      title: "Model in de wachtrij voor training",
+      title: "Model queued for training",
       description:
-        "Het model staat in de wachtrij voor training. U ontvangt een e-mail wanneer het model klaar is voor gebruik.",
+        "The model was queued for training. You will receive an email when the model is ready to use.",
       duration: 5000,
     });
 
@@ -193,10 +202,9 @@ export default function TrainModelZone() {
             name="name"
             render={({ field }) => (
               <FormItem className="w-full rounded-md">
-                <FormLabel>Naam</FormLabel>
+                <FormLabel>Name</FormLabel>
                 <FormDescription>
-                  Geef uw model een naam zodat u het later gemakkelijk kunt
-                  identificeren.
+                  Give your model a name so you can easily identify it later.
                 </FormDescription>
                 <FormControl>
                   <Input
@@ -213,7 +221,7 @@ export default function TrainModelZone() {
           <div className="flex flex-col gap-4">
             <FormLabel>Type</FormLabel>
             <FormDescription>
-              Selecteer het type portretfoto's dat u wilt genereren.
+              Select the type of headshots you want to generate.
             </FormDescription>
             <RadioGroup
               defaultValue={modelType}
@@ -248,7 +256,7 @@ export default function TrainModelZone() {
                   htmlFor="woman"
                   className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary">
                   <FaFemale className="mb-3 h-6 w-6" />
-                  Vrouw
+                  Woman
                 </Label>
               </div>
               <div>
@@ -272,19 +280,18 @@ export default function TrainModelZone() {
             className=" rounded-md justify-center align-middle cursor-pointer flex flex-col gap-4">
             <FormLabel>Samples</FormLabel>
             <FormDescription>
-              Upload 4-10 afbeeldingen van de persoon waarvan u een portretfoto
-              wilt maken.
+              Upload 4-10 images of the person you want to generate headshots
+              for.
             </FormDescription>
             <div className="outline-dashed outline-2 outline-gray-100 hover:outline-blue-500 w-full h-full rounded-md p-4 flex justify-center align-middle">
               <input {...getInputProps()} />
               {isDragActive ? (
-                <p className="self-center">Zet de bestanden hier neer ...</p>
+                <p className="self-center">Drop the files here ...</p>
               ) : (
                 <div className="flex justify-center flex-col items-center gap-2">
                   <FaImages size={32} className="text-gray-700" />
                   <p className="self-center">
-                    Sleep hier enkele bestanden en zet ze neer, of klik om
-                    bestanden te selecteren.
+                    Drag 'n' drop some files here, or click to select files.
                   </p>
                 </div>
               )}
@@ -303,17 +310,14 @@ export default function TrainModelZone() {
                     size={"sm"}
                     className="w-full"
                     onClick={() => removeFile(file)}>
-                    Verwijderen
+                    Remove
                   </Button>
                 </div>
               ))}
             </div>
           )}
 
-          <Button
-            type="submit"
-            className=" bg-sky-600 hover:bg-sky-700 w-full"
-            isLoading={isLoading}>
+          <Button type="submit" className="w-full" isLoading={isLoading}>
             Train Model{" "}
             {stripeIsConfigured && <span className="ml-1">(1 Credit)</span>}
           </Button>

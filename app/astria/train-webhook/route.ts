@@ -48,7 +48,17 @@ export async function POST(request: Request) {
 
   const urlObj = new URL(request.url);
   const user_id = urlObj.searchParams.get("user_id");
+  const model_id = urlObj.searchParams.get("model_id");
   const webhook_secret = urlObj.searchParams.get("webhook_secret");
+
+  if (!model_id) {
+    return NextResponse.json(
+      {
+        message: "Malformed URL, no model_id detected!",
+      },
+      { status: 500 }
+    );
+  }
 
   if (!webhook_secret) {
     return NextResponse.json(
@@ -116,20 +126,20 @@ export async function POST(request: Request) {
     if (resendApiKey) {
       const resend = new Resend(resendApiKey);
       await resend.emails.send({
-        from: "noreply@aifotosessie.nl",
+        from: "noreply@headshots.tryleap.ai",
         to: user?.email ?? "",
-        subject: "Je fotosessie was succesvol",
-        html: `<h2>Je fotosessie was succesvol, klik op de link om je foto's te bekijken</h2>        <a href="https://www.aifotosessie.nl/overview" style="background-color: #0072b1 ; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px;">Bekijk foto's</a>
-`,
+        subject: "Your model was successfully trained!",
+        html: `<h2>We're writing to notify you that your model training was successful! 1 credit has been used from your account.</h2>`,
       });
     }
 
     const { data: modelUpdated, error: modelUpdatedError } = await supabase
       .from("models")
       .update({
+        modelId: `${tune.id}`,
         status: "finished",
       })
-      .eq("modelId", tune.id)
+      .eq("id", model_id)
       .select();
 
     if (modelUpdatedError) {
