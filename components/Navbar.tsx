@@ -35,6 +35,8 @@ export const dynamic = "force-dynamic";
 
 const stripeIsConfigured = process.env.NEXT_PUBLIC_STRIPE_IS_ENABLED === "true";
 
+const packsIsEnabled = process.env.NEXT_PUBLIC_TUNE_TYPE === "packs";
+
 export const revalidate = 0;
 
 export default async function Navbar() {
@@ -74,7 +76,11 @@ export default async function Navbar() {
           </Link>
         </div>
       )}
-
+      {packsIsEnabled && (
+        <Link href="/overview/packs">
+          <Button variant={"ghost"}>Packs</Button>
+        </Link>
+      )}
       {user && (
         <div className=" flex flex-row lg:ml-auto  gap-2 ">
           {stripeIsConfigured && (
