@@ -26,7 +26,7 @@ export default async function Index() {
       <div className="flex flex-col lg:flex-row items-center gap-8 p-8 max-w-6xl w-full">
         <div className="flex flex-col space-y-4 lg:w-1/2 w-full">
           <h1 className="text-5xl font-bold ">
-            Professionele portretfoto's maken met AI zonder fotograaf ✨
+            Wij zijn even onder constructie dit duurt een paar dagen ✨
             <br />
           </h1>
           <p className="text-gray-600 text-xl">
