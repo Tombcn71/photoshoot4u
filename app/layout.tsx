@@ -1,7 +1,6 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "@/components/ui/toaster";
-import Banner from "@/components/Banner";
 import "./globals.css";
 import { Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
@@ -26,7 +25,6 @@ export default function RootLayout({ children }: any) {
       />
 
       <body className="min-h-screen flex flex-col">
-        <Banner />
         <CrispWithNoSSR /> <CookieConsent />
         <section>
           <Suspense
