@@ -26,13 +26,13 @@ export default async function Index() {
       <div className="flex flex-col lg:flex-row items-center gap-8 p-8 max-w-6xl w-full">
         <div className="flex flex-col space-y-4 lg:w-1/2 w-full">
           <h1 className="text-5xl font-bold ">
-            Wij zijn even onder constructie dit duurt een paar dagen ✨
+            Professionele fotosessie met behulp van AI✨
             <br />
           </h1>
           <p className="text-gray-600 text-xl">
             👍Ideaal voor sociale profielen, websites, cv's en professionele
-            portfolio's, makkelijk vanaf thuis of je werk, zonder studio of
-            fotograaf!
+            portfolio's, makkelijk vanaf thuis of je werk, zonder fotograaf of
+            studio!
           </p>
           <div className="flex flex-col space-y-2">
             <Link href="/login">
