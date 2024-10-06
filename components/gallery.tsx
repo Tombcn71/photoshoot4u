@@ -88,7 +88,7 @@ const Gallery = () => {
   ];
   return (
     <>
-      <div className="pt-20">
+      <div className="pt-20 ">
         <div className="p-6 container mx-auto">
           <div className="py-2 pb-16">
             <h1 className="text-center font-semibold text-3xl">
