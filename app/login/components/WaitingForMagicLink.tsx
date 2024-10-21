@@ -9,19 +9,19 @@ export const WaitingForMagicLink = ({
   return (
     <>
       <div className="flex items-center justify-center p-8">
-        <div className="flex flex-col gap-4 bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 p-4 rounded-xl max-w-sm w-full">
-          <h1 className="text-xl">Controleer je e-mail om door te gaan</h1>
+        <div className="flex flex-col gap-4 bg-black border border-neutral-200 p-4 rounded-xl max-w-sm w-full">
+          <h1 className="text-xl">Please check your email to continue</h1>
           <div className="flex flex-col gap-2">
             <p className="text-sm">
-              We hebben een magic link per e-mail gestuurd deze geeft toegang
-              tot uw account.
+              We have sent a magic link by email, which provides access to your
+              account.
             </p>
-            <p className="text-xs opacity-60">Tip: check je spam folder. </p>
+            <p className="text-md opacity-60">Tip: check your spam folder. </p>
           </div>
           <div>
             <Button onClick={toggleState} variant="secondary" size="sm">
               <ArrowLeft size={14} />
-              Terug{" "}
+              Back{" "}
             </Button>
           </div>
         </div>

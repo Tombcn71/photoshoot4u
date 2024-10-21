@@ -40,9 +40,9 @@ export const Login = ({
       setTimeout(() => {
         setIsSubmitting(false);
         toast({
-          title: "Email verzonden",
+          title: "Email sent",
           description:
-            "Controleer je inbox voor de magic link waarmee je kunt inloggen.",
+            "Check your inbox for the magic link that allows you to log in.",
           duration: 5000,
         });
         setIsMagicLinkSent(true);
@@ -50,10 +50,9 @@ export const Login = ({
     } catch (error) {
       setIsSubmitting(false);
       toast({
-        title: "Er is iets fout gegaan",
+        title: "Something went wrong",
         variant: "destructive",
-        description:
-          "Probeer het nog eens, wanneer het niet lukt, neem dan contact met ons op",
+        description: "Please try again, if it doesn't work, please contact us",
         duration: 5000,
       });
     }
