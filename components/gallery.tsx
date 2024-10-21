@@ -92,7 +92,7 @@ const Gallery = () => {
         <div className="p-6 container mx-auto">
           <div className="py-2 pb-16">
             <h1 className="text-center font-semibold text-3xl">
-              👉 Keuze uit verschillende thema packs.
+              👉 Choose from different theme packs.
             </h1>
           </div>
           <div className="container m-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">

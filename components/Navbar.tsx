@@ -57,22 +57,22 @@ export default async function Navbar() {
       <div className="flex gap-2 h-full ">
         <Link href="/">
           <h2 className=" font-medium  text-2xl items-center   flex">
-            <Image src="/logo7.png" width={30} height={30} alt="Logo" />{" "}
-            <span className="mt-1 ml-1 pb-1 px-2"> Ai Fotosessie</span>{" "}
+            <Image src="/logot.png" width={30} height={30} alt="Logo" />{" "}
+            <span className="mt-1 ml-1 pb-1 px-2"> Photoshoot 4u</span>{" "}
           </h2>
         </Link>
       </div>
       {!user && (
         <div className="md:block hidden  lg:ml-auto align-items: flex-end;  justify-end">
-          <Link href="/#Hoe">
-            <Button variant={"ghost"}>Hoe werkt het?</Button>
+          <Link href="/#How">
+            <Button variant={"ghost"}>How it works</Button>
           </Link>
 
           <Link href="/#Faq ">
             <Button variant={"ghost"}>Faq</Button>
           </Link>
-          <Link href="/#Prijzen">
-            <Button variant={"ghost"}>Prijzen</Button>
+          <Link href="/#Pricing">
+            <Button variant={"ghost"}>Pricing</Button>
           </Link>
         </div>
       )}
@@ -85,19 +85,12 @@ export default async function Navbar() {
         <div className=" flex flex-row lg:ml-auto  gap-2 ">
           {stripeIsConfigured && (
             <Link href="/get-credits">
-              <Button variant={"ghost"}>koop credits</Button>
+              <Button variant={"ghost"}>Buy credits</Button>
             </Link>
           )}
         </div>
       )}
       <div className=" flex gap-4 lg:ml-auto scroll-smooth">
-        {!user && (
-          <Link href="/login" className="md:block hidden">
-            <Button className="text-white rounded-full bg-sky-600 hover:bg-sky-700 w-full border ">
-              Inloggen / Registreren{" "}
-            </Button>
-          </Link>
-        )}{" "}
         {user && (
           <div className="flex flex-row gap-4 text-center align-middle justify-center">
             {stripeIsConfigured && (
@@ -125,28 +118,28 @@ export default async function Navbar() {
           </div>
         )}{" "}
         <Sheet>
-          <div className="bg-white md:hidden ">
+          <div className=" md:hidden ">
             <SheetTrigger>
               <MenuIcon className="mr-2 mt-3" />
             </SheetTrigger>
-            <div className="bg-white">
-              <SheetContent className="w-[220px] h-[250px] p-1 text-align: leftsm:w-[240px]">
+            <div className="">
+              <SheetContent className="w-[220px] h-[250px] bg-black p-1 text-align: leftsm:w-[240px]">
                 {" "}
                 <div className="overflow-anchor: none;">
                   <ul>
                     <li className="flex flex-col pt-4   ">
-                      <Link href="/#Hoe" className="items-cemter">
+                      <Link href="/#How" className="items-cemter">
                         <Button
                           variant={"ghost"}
                           className="text-l	text-align: left">
-                          Hoe werkt het?
+                          How it works
                         </Button>
                       </Link>
-                      <Link href="/#Prijzen" className="items-cemter">
+                      <Link href="/#Pricing" className="items-cemter">
                         <Button
                           variant={"ghost"}
                           className="text-l	text-align: left">
-                          Prijzen
+                          Pricing
                         </Button>
                       </Link>
                       <Link href="/#Faq">
@@ -158,7 +151,7 @@ export default async function Navbar() {
                       <SheetClose asChild>
                         {!user && (
                           <Link href="/login" className="pl-4 pt-4">
-                            <Button className="bg-sky-600 hover:bg-sky-700 pl-4">
+                            <Button className="bg-purple-600 hover:bg-purple-700 pl-4">
                               Inloggen / Registreren
                             </Button>
                           </Link>

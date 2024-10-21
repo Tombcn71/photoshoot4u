@@ -3,48 +3,47 @@ import React from "react";
 export const Terms = () => {
   return (
     <div>
-      <article className="prose m-12 lg:prose-xl">
-        <h1>Algemene voorwaarden</h1>
+      <article className="prose text-white m-12 lg:prose-xl">
+        <h1 className="text-white">Terms</h1>
         <p>
           {" "}
-          1. Aifotosessie.nl is een web applicatie die kunstmatige intelligentie
-          gebruikt om gepersonaliseerde hoofdfoto's te genereren. Deze algemene
-          voorwaarden regelen het gebruik van de app en de relatie tussen u en
-          Aifotosessie.nl.
+          1. Photoshoot4u.com is a web application that uses artificial
+          intelligence used to generate personalized main photos. This general
+          terms and conditions govern the use of the app and the relationship
+          between you and Photoshoot4u.com.
         </p>{" "}
         <p>
-          2. Acceptatie: Door de app te gebruiken, gaat u akkoord met deze
-          algemene voorwaarden.
+          2. Acceptance: By using the app you agree to these general terms and
+          conditions.
         </p>{" "}
         <p>
-          3. Gebruik van de app: U mag de app alleen gebruiken voor
-          persoonlijke, niet-commerciële doeleinden. U mag de app niet gebruiken
-          op een manier die schadelijk, onwettig of beledigend is.
+          3. Use of the app: You may only use the app for personal,
+          non-commercial purposes. You are not allowed to use the app in any way
+          that is harmful, unlawful or offensive.
         </p>
         <p>
-          4. Intellectueel eigendom: Alle intellectuele eigendomsrechten aan de
-          app en de inhoud ervan behoren toe aan Aifotosessie.nl.
+          4. Intellectual property: All intellectual property rights belong to
+          the app and its content belong to Photoshoot4u.com
         </p>
         <p>
-          5. Aansprakelijkheid: Aifotosessie.nl is niet aansprakelijk voor enige
-          schade die u lijdt als gevolg van het gebruik van de app.
+          5. Liability: Photoshoot4u.com is not liable for any damage you suffer
+          as a result of using the app.
         </p>
         <p>
-          6. Wijzigingen: We kunnen deze algemene voorwaarden van tijd tot tijd
-          wijzigen. We zullen u op de hoogte stellen van wijzigingen via de app
-          of per e-mail.
+          6. Changes: We may change these terms and conditions from time to time
+          change. We will notify you of changes via the app or by email.
         </p>{" "}
         <p>
-          7. Beëindiging: We kunnen uw gebruik van de app beëindigen als u deze
-          algemene voorwaarden schendt.
+          7. Termination: We may terminate your use of the App if you terminate
+          it violates general terms and conditions.
         </p>
         <p>
-          8. Toepasselijk recht: Deze algemene voorwaarden worden beheerst door
-          en geïnterpreteerd in overeenstemming met het Nederlandse recht.  
+          8. Governing law: These terms and conditions are governed by and
+          interpreted in accordance with Dutch law.
         </p>
         <p>
-          9. Contact: Voor vragen of opmerkingen over onze algemene voorwaarden
-          kunt u contact met ons opnemen via de livechat.
+          9. Contact: For questions or comments about our general terms and
+          conditions you can contact us via live chat.
         </p>
       </article>
     </div>

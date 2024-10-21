@@ -5,25 +5,27 @@ import Image from "next/image";
 function footer3() {
   return (
     <div>
-      <footer className="bg-sky-50">
+      <footer className="bg-black text-white border-t-2 border-white">
         <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="flex justify-center text-black ">
             <Link href="/">
               <h2 className=" font-medium  text-2xl items-center   flex">
-                <Image src="/logo7.png" width={30} height={30} alt="Logo" />{" "}
-                <span className="mt-1 ml-1 pb-1 "> aifotosessie.nl</span>{" "}
+                <Image src="/logot.png" width={30} height={30} alt="Logo" />{" "}
+                <span className="mt-1 ml-1 pb-1 text-white">
+                  {" "}
+                  Photoshoot 4u
+                </span>{" "}
               </h2>
             </Link>
           </div>
 
-          <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
-            Onze missie is om AI-portretfotografie voor iedereen toegankelijk te
-            maken. Met AI verlagen we de kosten van traditionele portretsessies
-            aanzienlijk.
+          <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-white">
+            Our mission is to make AI photography accessible to everyone. With
+            AI we significantly reduce the costs of traditional photoshoots.
           </p>
-          <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
-            <Link href="/Privacybeleid">Privacybeleid</Link>
-            <Link href="/Algemenevoorwaarden">Algemene voorwaarden</Link>
+          <ul className="mt-12 flex flex-wrap justify-center text-white gap-6 md:gap-8 lg:gap-12">
+            <Link href="/Privacy">Privacypolicy</Link>
+            <Link href="/Terms">Terms</Link>
           </ul>
           <ul className="mt-12 flex justify-center gap-6 md:gap-8">
             <Link

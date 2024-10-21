@@ -102,18 +102,12 @@ export const Login = ({
   return (
     <>
       {" "}
-      <div className="  px-8 text-xl text-center">
-        <h1 className="font-bold text-3xl pb-6">👋 Hallo welkom!</h1>
-        <div className="text-base">
-          Vul je e-mailadres in en wij sturen je een <br />
-          ✨magic link✨ waarmee je kunt inloggen. <br /> Hierna kun je credits
-          kopen en je fotosessie starten
-        </div>
-      </div>
-      <div className="flex items-center justify-center p-8">
-        <div className="flex flex-col gap-4  dark:bg-neutral-900 border border-200 p-4 rounded-xl max-w-sm w-full">
-          <h1 className="text-base font-semibold	">Inloggen/Registreren</h1>
-          <p className=" opacity-60">Login of registreer je. </p>
+      <div className="flex items-center justify-center ">
+        <div className="flex flex-col  border-8 border-white  p-4 rounded-xl max-w-md  w-full ">
+          <h1 className="text-base font-semibold	">
+            <div className=" text-5xl">✨</div>Login/Register
+          </h1>
+          <p className=" opacity-60">Login or register. </p>
           <p className="font-semibold	">e-mail</p>
           {/* <Button
             onClick={signInWithGoogle}
@@ -131,8 +125,9 @@ export const Login = ({
             <div className="flex flex-col gap-4">
               <div className="flex flex-col gap-2">
                 <Input
+                  className="text-xl md:text-sm text-black p-5 border-4 border-purple-400 bg-white"
                   type="email"
-                  placeholder="jij@voorbeeld.com"
+                  placeholder="you@example.com"
                   {...register("email", {
                     required: true,
                     validate: {
@@ -155,15 +150,14 @@ export const Login = ({
                 )}
               </div>
             </div>
-
             <Button
               isLoading={isSubmitting}
               disabled={isSubmitting}
               variant="outline"
-              className="bg-sky-600 border rounded-full  h-12 px-6 m-2 text-lg text-white"
+              className="border  rounded-md h-12 p-7 m-2 text-lg  text-white bg-gradient-to-r from-purple-400 to-blue-500 animate-pulse animate-infinite"
               type="submit">
-              versturen
-            </Button>
+              Create your AI photoshoot
+            </Button>{" "}
           </form>
         </div>
       </div>

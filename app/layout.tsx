@@ -5,15 +5,16 @@ import "./globals.css";
 import { Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { GoogleTagManager } from "@next/third-parties/google";
+import Image from "next/image";
 const CrispWithNoSSR = dynamic(() => import("@/components/crisp"));
 
 import dynamic from "next/dynamic";
 import { CookieConsent } from "@/components/CookieConsent";
 
 export const metadata = {
-  title: "Professionele portretfoto's maken met AI✨ | AIfotosessie.nl",
+  title: "Professional photoshoot with AI✨ | Photoshoot4u.com",
   description:
-    " 👍 Ideaal voor sociale profielen, cv's en professionele portfolios, makkelijk vanuit thuis of je werk, zonder studio of fotograaf",
+    " 👍 Generate amazing photohoots with our AI Photographer! Perfect for professional portfolios and social media. Save money and time",
 };
 
 export default function RootLayout({ children }: any) {
@@ -24,7 +25,8 @@ export default function RootLayout({ children }: any) {
 "
       />
 
-      <body className="min-h-screen flex flex-col">
+      <body className="min-h-screen flex flex-col text-white bg-black">
+        {" "}
         <CrispWithNoSSR /> <CookieConsent />
         <section>
           <Suspense
@@ -35,6 +37,10 @@ export default function RootLayout({ children }: any) {
           </Suspense>
         </section>
         <main className="flex flex-1 flex-col items-center py-16">
+          {" "}
+          <div className="absolute size-full">
+            <Image src="/1.jpg" alt="background" fill className="size-full" />
+          </div>
           {children}
         </main>
         <Footer />

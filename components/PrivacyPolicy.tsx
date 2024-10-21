@@ -3,56 +3,54 @@ import React from "react";
 export const PrivacyPolicy = () => {
   return (
     <div>
-      <article className="prose m-12 lg:prose-xl">
-        <h1>Privacybeleid</h1>
+      <article className="prose m-12 text-white lg:prose-xl">
+        <h1 className="text-white">Privacy Policy</h1>
         <p>
           {" "}
-          1. Aifotosessie.nl is een web applicatie die kunstmatige intelligentie
-          gebruikt om gepersonaliseerde hoofdfoto's te genereren. Dit
-          privacybeleid legt uit hoe we persoonlijke informatie verzamelen,
-          gebruiken, delen en beschermen wanneer u onze app gebruikt.
+          1. Photoshoot4u.com is a web application that uses artificial
+          intelligence used to generate personalized main photos. This privacy
+          policy explains how we collect personal information, use, share and
+          protect when you use our app.
         </p>{" "}
         <p>
-          2. Gegevensverzameling Persoonlijke gegevens: We kunnen de volgende
-          persoonlijke gegevens verzamelen: Naam E-mailadres Geüploade foto's
-          Applicatiegebruikgegevens Automatische gegevensverzameling: We kunnen
-          automatisch gegevens verzamelen, zoals: IP-adres
-          Applicatiegebruikgegevens Apparaatinformatie{" "}
+          2. Data collection Personal data: We may do the following collect
+          personal information: Name Email address Uploaded photos Application
+          Usage Data Automatic Data Collection: We may automatically collect
+          data such as: IP address Application usage data Device information{" "}
         </p>{" "}
         <p>
-          3. Gegevensgebruik: We gebruiken uw gegevens om: De app te leveren en
-          te onderhouden Uw account te beheren U te informeren over updates en
-          nieuwe functies Uw gebruik van de app te analyseren en te verbeteren
-          Uw hoofdfoto's te genereren{" "}
+          3. Data use: We use your data to: Provide the app and maintain manage
+          your account inform you about updates and new features Analyze and
+          improve your use of the app Generate your main photos{" "}
         </p>
         <p>
-          4. Gegevensdeling: We delen uw persoonlijke gegevens niet met derden,
-          tenzij: Dit wettelijk verplicht is We uw toestemming hebben Het nodig
-          is voor het leveren van de app of het beheer van uw account{" "}
+          4. Data sharing: We do not share your personal data with third
+          parties, unless: This is required by law. We need your consent is for
+          providing the app or managing your account{" "}
         </p>
         <p>
-          5. Gegevensoverdracht: Uw gegevens kunnen worden overgedragen naar en
-          opgeslagen in landen buiten de Europese Economische Ruimte (EER). We
-          nemen passende maatregelen om ervoor te zorgen dat uw gegevens
-          beschermd zijn, ongeacht waar ze zich bevinden.
+          5. Data transfer: Your data may be transferred to and stored in
+          countries outside the European Economic Area (EEA). We take
+          appropriate measures to ensure that your data are protected no matter
+          where they are.
         </p>
         <p>
-          6.Gegevensbijwerken: U kunt uw persoonlijke gegevens bijwerken of
-          verwijderen door contact met ons op te nemen via [e-mailadres].
+          6.Update information: You can update your personal information or
+          delete it by contacting us at the livechat.
         </p>{" "}
         <p>
-          7. Gegeven beveiliging: We implementeren passende technische en
-          organisatorische maatregelen om uw gegevens te beschermen tegen
-          ongeoorloofde toegang, gebruik, wijziging of vernietiging.  {" "}
+          7. Given security: We implement appropriate technical and
+          organizational measures to protect your data against unauthorized
+          access, use, modification or destruction.  {" "}
         </p>
         <p>
-          8. Wijzigingen in het privacybeleid: We kunnen dit privacybeleid van
-          tijd tot tijd bijwerken. We zullen u op de hoogte stellen van
-          wijzigingen via de app of per e-mail.  
+          8. Privacy Policy Changes: We may change this privacy policy from
+          update time to time. We will notify you changes via the app or by
+          email.  
         </p>
         <p>
-          9. Contact: Voor vragen of opmerkingen over ons privacybeleid kunt u
-          contact met ons opnemen via de livechat.
+          9. Contact: For questions or comments about our privacy policy, please
+          contact us via live chat.
         </p>
       </article>
     </div>
