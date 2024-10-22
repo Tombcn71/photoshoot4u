@@ -76,7 +76,7 @@ export default async function Navbar() {
           </Link>
         </div>
       )}
-      {packsIsEnabled && (
+      {user && packsIsEnabled && (
         <Link href="/overview/packs">
           <Button variant={"ghost"}>Packs</Button>
         </Link>
