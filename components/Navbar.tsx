@@ -54,10 +54,10 @@ export default async function Navbar() {
 
   return (
     <div className=" flex w-full px-4 lg:px-40 py-4  border-b text-center gap-8 justify-between ">
-      <div className="flex gap-2 h-full ">
-        {user && (
+      {!user && (
+        <div className="flex gap-2 h-full ">
           <Link href="/">
-            <h2 className="  font-medium  text-2xl items-center   flex">
+            <h2 className=" font-medium  text-2xl items-center   flex">
               <Image src="/logot.png" width={30} height={30} alt="Logo" />{" "}
               <span className=" mt-1 ml-1 pb-1 px-2 lg:text">
                 {" "}
@@ -65,8 +65,8 @@ export default async function Navbar() {
               </span>{" "}
             </h2>
           </Link>
-        )}
-      </div>
+        </div>
+      )}
       {!user && (
         <div className="md:block hidden  lg:ml-auto align-items: flex-end;  justify-end">
           <Link href="/#How">
