@@ -28,21 +28,19 @@ export default function RootLayout({ children }: any) {
       <body className="min-h-screen flex flex-col text-white bg-black">
         {" "}
         <CrispWithNoSSR /> <CookieConsent />
-        <section>
-          <Suspense
-            fallback={
-              <div className="flex w-full px-4 lg:px-40 py-4 items-center border-b text-center gap-8 justify-between h-[69px]" />
-            }>
-            <Navbar />
-          </Suspense>
-        </section>
+        <Suspense
+          fallback={
+            <div className="flex w-full px-4 lg:px-40 py-4 items-center border-b text-center gap-8 justify-between h-[69px]" />
+          }>
+          <Navbar />
+        </Suspense>{" "}
         <main className="flex flex-1 flex-col items-center py-16">
           {" "}
           <div className="absolute size-full">
             <Image src="/1.jpg" alt="background" fill className="size-full" />
           </div>
           {children}
-        </main>
+        </main>{" "}
         <Footer />
         <Toaster />
         <Analytics />
