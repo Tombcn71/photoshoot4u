@@ -55,12 +55,12 @@ const pricingOptions = [
     title: "1 Credit",
 
     price: "29€",
-    description: "1 fotosessie voor 1 persoon.",
+    description: "1 AI photoshoot for 1 person.",
     features: [
-      "1 fotosessie",
-      "40 HD-foto's met AI",
-      "Meer dan 20 stijlen",
-      "Klaar in 60 minuten",
+      "1 fotoshoot",
+      "40 HD photo's",
+      "More then 20 styles",
+      "Done in 60 minutes",
     ],
     buttonText: "Buy Now ",
     bgColor: "bg-white",
@@ -69,12 +69,12 @@ const pricingOptions = [
     title: "3 Credits",
 
     price: "59€ ",
-    description: "3 fotosessies ook te gebruiken voor verschillende personen",
+    description: "3 AI photoshoots, can be used for multiple persons",
     features: [
-      "3 fotosessies",
-      "Elk 40 HD AI-foto's",
-      "Meer dan 20 stijlen",
-      "Klaar in 60 minuten",
+      "3 photoshoots",
+      "40 HD photo's each",
+      "More then 20 styles",
+      "Done in 60 minutes",
     ],
 
     buttonText: "Buy Now ",
@@ -84,12 +84,12 @@ const pricingOptions = [
     title: "5 Credits",
 
     price: "99€",
-    description: "5 fotosessies ook te gebruiken voor verschillende personen",
+    description: "5 AI photoshoots, can be used for multiple persons",
     features: [
-      "5 fotosessies",
-      "Elk 40 HD AI-foto's",
-      "Meer dan 20 stijlen",
-      "Klaar in 60 minuten",
+      "5 photoshoots",
+      "40 HD photo's each",
+      "More then 20 styles",
+      "Done in 60 minutes",
     ],
     buttonText: "Buy Now ",
     bgColor: "bg-white",
