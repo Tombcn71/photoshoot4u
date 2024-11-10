@@ -32,7 +32,7 @@ export const CookieConsent = () => {
   }
 
   return (
-    <div className="ml-0 shadow-2xl  flex fixed bottom-4 left-1/2 w-full sm:w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/3 max-w-2xl min-w-xs py-15 p-8 m-4 bg-white text-black flex flex-col items-center justify-center transform -translate-x-1/2">
+    <div className="ml-0 shadow-2xl  flex fixed bottom-4 left-1/2 w-full sm:w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/3 max-w-2xl min-w-xs py-15 p-8 m-4 bg-black text-white flex flex-col items-center justify-center transform -translate-x-1/2">
       <div>
         <p>
           We use various standard analysis packages. These are some cookies. Do
@@ -42,12 +42,12 @@ export const CookieConsent = () => {
       <div className="flex mt-2">
         <button
           onClick={acceptConsent}
-          className="bg-sky-600 text-white px-4 py-2 rounded mr-2">
+          className="bg-purple-600 text-white px-4 py-2 rounded mr-2">
           Accept{" "}
         </button>
         <button
           onClick={declineConsent}
-          className="bg-sky-600 text-white px-4 py-2 rounded">
+          className="bg-purple-600 text-white px-4 py-2 rounded">
           Decline{" "}
         </button>
       </div>

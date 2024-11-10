@@ -6,7 +6,7 @@ export default () => {
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="max-w-xl mx-auto text-center">
           <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-            Wear worlds most exclusive brands
+            Model in worlds most exclusive brands
           </h3>
           <p className="text-gray-600 mt-3">
             Our AI is trained to dress you up in the ost exclusive brand clothes
