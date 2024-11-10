@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { GoogleTagManager } from "@next/third-parties/google";
 import Image from "next/image";
+
 const CrispWithNoSSR = dynamic(() => import("@/components/crisp"));
 
 import dynamic from "next/dynamic";
@@ -25,7 +26,7 @@ export default function RootLayout({ children }: any) {
 "
       />
 
-      <body className="min-h-screen flex flex-col text-white bg-black">
+      <body className="min-h-screen flex flex-col text-white bg-[url('/model.jpg')] bg-black">
         {" "}
         <CrispWithNoSSR /> <CookieConsent />
         <Suspense

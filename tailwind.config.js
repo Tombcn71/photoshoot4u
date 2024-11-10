@@ -8,6 +8,9 @@ module.exports = {
     "./src/**/*.{ts,tsx}",
   ],
   theme: {
+    backgroundImage: {
+      "hero-bg": "url('/model.jpg')",
+    },
     container: {
       center: true,
       padding: "2rem",

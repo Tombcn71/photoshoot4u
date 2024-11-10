@@ -153,7 +153,7 @@ export const Login = ({
               isLoading={isSubmitting}
               disabled={isSubmitting}
               variant="outline"
-              className="border  rounded-md h-12 p-7 m-2 text-lg  text-white bg-gradient-to-r from-purple-400 to-blue-500 animate-pulse animate-infinite"
+              className="border  rounded-md h-12 p-7 m-2 text-lg  text-white bg-gradient-to-r from-purple-400 to-blue-500 animate-pulse animate-infinite hover: text-white bg-gradient-to-r from-purple-400 to-blue-500 animate-pulse animate-infinite"
               type="submit">
               Create your AI photoshoot
             </Button>{" "}

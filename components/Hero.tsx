@@ -1,47 +1,35 @@
+import { Login } from "@/app/login/components/Login";
 import React from "react";
 
 export const Hero = () => {
   return (
-    <div>
-      <header>
-        <meta charSet="utf-8" />
-        <title>GeeksforGeeks</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-      </header>
-
-      <div>
-        <h1
-          className="text-green-600 text-3xl 
-                    font-bold">
-          GeeksforGeeks
-        </h1>
-        <h3 className="text-xl text-white">
-          Full Screen Background Video in Tailwind CSS
-        </h3>
+    <div
+      className="flex flex-col items-center pt-0 bg-cover ')]
+ ">
+      <div className="absolute size-full "></div>
+      <div className="flex flex-col lg:flex-row items-center gap-8 p-8 max-w-6xl w-full ">
+        <div className="flex flex-col space-y-4 lg:w-1/2 w-full">
+          <h1 className="text-5xl font-bold	">
+            📷AI-generated magazine-style photoshoots 4u
+            <br />
+          </h1>
+          <p className="text-white text-xl">
+            Upload selfies and do a magazine-style photoshoot from your phone or
+            laptop safe time and money no need paying an expensive photographer
+          </p>
+          <p className="text-xl underline leading-[2rem]">
+            ✈️Model in iconic cities (Paris, Barcelona, Rome). <br />
+            ❤️Wear luxury brands ( Chanel, Hermès, Louis Vuitton, Armani).{" "}
+            <br />
+            🚘Pose with supercars (Ferrari, Lamborghini, Bugatti).
+          </p>
+          <div className="flex flex-col space-y-2"></div>
+        </div>
+        <div className="lg:w-1/2 w-full mt-8 lg:mt-0  ">
+          <Login host={null} />
+        </div>{" "}
       </div>
-      <header
-        className="relative flex items-center 
-                    justify-center h-screen mb-12 
-                    overflow-hidden">
-        <a
-          href="https://geeksforgeeks.org"
-          className="relative z-30 p-5 text-2xl 
-                   text-white bg-green-400 bg-opacity-50
-                   rounded-xl">
-          GeeksforGeeks
-        </a>
-        <video
-          autoPlay
-          loop
-          muted
-          className="absolute z-10 w-auto 
-                    min-w-full min-h-full max-w-none">
-          <source
-            src="https://media.geeksforgeeks.org/wp-content/uploads/20221105184949/ezgif.com-gif-maker.mp4"
-            type="video/mp4"
-          />
-        </video>
-      </header>
     </div>
   );
 };
+export default Hero;
