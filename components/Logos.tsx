@@ -55,7 +55,7 @@ export default () => {
 
             <li>
               <Image
-                src="/Chanel.png"
+                src="/Dior.png"
                 width={100}
                 height={100}
                 alt="Picture of the author"
@@ -64,7 +64,7 @@ export default () => {
 
             <li>
               <Image
-                src="/Louis.png"
+                src="/Balenciaga.png"
                 width={100}
                 height={100}
                 alt="Picture of the author"
@@ -74,7 +74,7 @@ export default () => {
             {/* LOGO 3 */}
             <li>
               <Image
-                src="/Hermes.png"
+                src="/Armani.png"
                 width={100}
                 height={100}
                 alt="Picture of the author"
@@ -84,7 +84,7 @@ export default () => {
             {/* LOGO 4 */}
             <li>
               <Image
-                src="/Burberry.png"
+                src="/Gucci.png"
                 width={100}
                 height={100}
                 alt="Picture of the author"
