@@ -12,7 +12,7 @@ import { Login } from "./login/components/Login";
 import Faqslist from "@/components/Faqslist";
 export const dynamic = "force-dynamic";
 import HeroFashion from "@/components/HeroFashion";
-import Logos from "@/components/logos";
+import Logos from "@/components/Logos";
 export default async function Index() {
   const supabase = createServerComponentClient({ cookies });
 
