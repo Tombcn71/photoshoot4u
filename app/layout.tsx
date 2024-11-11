@@ -6,6 +6,10 @@ import { Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { GoogleTagManager } from "@next/third-parties/google";
 import Image from "next/image";
+import { Roboto } from "next/font/google";
+import "./globals.css";
+
+const roboto = Roboto({ weight: "400", subsets: ["latin"] });
 
 const CrispWithNoSSR = dynamic(() => import("@/components/crisp"));
 
@@ -20,13 +24,13 @@ export const metadata = {
 
 export default function RootLayout({ children }: any) {
   return (
-    <html className="scroll-smooth" lang="en">
+    <html className=" scroll-smooth" lang="en">
       <GoogleTagManager
         gtmId="GTM-5PRW4T3L
 "
       />
 
-      <body className="min-h-screen flex flex-col text-white bg-[url('/model.jpg')] bg-black">
+      <body className=" {roboto.className} min-h-screen flex flex-col text-white bg-[url('/model.jpg')] bg-black">
         {" "}
         <CrispWithNoSSR /> <CookieConsent />
         <Suspense
