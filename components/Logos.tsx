@@ -2,11 +2,12 @@ import Image from "next/image";
 
 export default () => {
   return (
-    <div className="py-14">
+    <div className="py-10">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="max-w-xl mx-auto text-center">
-          <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-            Wear worlds most exclusive brands
+          <h3 className="text-gray-800 text-3xl font-semibold sm:text-2xl">
+            Wear worlds most exclusive brands in iconic cities like Paris,
+            Barcelona, Rome, New York.
           </h3>
         </div>
         <div className="mt-12 flex justify-center">

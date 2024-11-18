@@ -101,7 +101,7 @@ export const Login = ({
   return (
     <>
       {" "}
-      <div className="flex items-center justify-center ">
+      <div className="flex items-center p-20 justify-center ">
         <div className="flex flex-col  border-8 border-white  p-4 rounded-xl max-w-md  w-full ">
           <h1 className="text-base font-semibold	">
             <div className=" text-5xl">✨</div>Login/Register

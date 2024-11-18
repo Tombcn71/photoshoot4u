@@ -13,6 +13,10 @@ import Faqslist from "@/components/Faqslist";
 export const dynamic = "force-dynamic";
 import HeroFashion from "@/components/HeroFashion";
 import Logos from "@/components/Logos";
+
+import Image from "next/image";
+
+import Hero5 from "@/components/Hero5";
 export default async function Index() {
   const supabase = createServerComponentClient({ cookies });
 
@@ -26,13 +30,11 @@ export default async function Index() {
 
   return (
     <div className="flex flex-col items-center   ">
-      <div className="bg-cover ">
+      <div className="bg-cover pb-18">
         {" "}
-        <Hero />
+        <Hero5 />
       </div>
-      <div className="bg-white">
-        <Logos />
-      </div>
+
       <div className="bg-black">
         {" "}
         <Gallery />
@@ -40,6 +42,12 @@ export default async function Index() {
           <ExplainerSection />
           <Faqslist />
           <PricingSection />
+          <Image
+            src="/design.png"
+            alt="Picture of the author"
+            width={1500}
+            height={500}
+          />
         </div>
       </div>
     </div>
