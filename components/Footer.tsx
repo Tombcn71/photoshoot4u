@@ -10,7 +10,7 @@ function footer3() {
           <div className="flex justify-center text-black ">
             <Link href="/">
               <h2 className=" font-medium  text-2xl items-center   flex">
-                <Image src="/logot.png" width={30} height={30} alt="Logo" />{" "}
+                <Image src="/logo.png" width={30} height={30} alt="Logo" />{" "}
                 <span className="mt-1 ml-1 pb-1 text-white">
                   {" "}
                   Photoshoot 4u
