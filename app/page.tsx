@@ -38,16 +38,10 @@ export default async function Index() {
       <div className="bg-black">
         {" "}
         <Gallery />
-        <div className="pl-20">
+        <div className="pl-24">
           <ExplainerSection />
           <Faqslist />
           <PricingSection />
-          <Image
-            src="/design.png"
-            alt="Picture of the author"
-            width={1500}
-            height={500}
-          />
         </div>
       </div>
     </div>

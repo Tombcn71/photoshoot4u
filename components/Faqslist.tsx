@@ -49,7 +49,7 @@ export default () => {
             </p>
           </div>
           <Image
-            src="/model.jpg"
+            src="/pose5.jpg"
             width={500}
             height={500}
             alt="Picture of the author"
