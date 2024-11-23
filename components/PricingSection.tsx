@@ -52,7 +52,7 @@ export default function PricingSection() {
 
 const pricingOptions = [
   {
-    title: "1 magazine-style AI photoshoot",
+    title: "1 AI photoshoot",
 
     price: "29€",
     description: "1 AI photoshoot for 1 person.",
@@ -66,7 +66,7 @@ const pricingOptions = [
     bgColor: "bg-white",
   },
   {
-    title: "3 Credits",
+    title: "3 AI photoshoots",
 
     price: "59€ ",
     description: "3 AI photoshoots, can be used for multiple persons",
@@ -81,7 +81,7 @@ const pricingOptions = [
     bgColor: "bg-blue-50",
   },
   {
-    title: "5 Credits",
+    title: "5 AI photoshoots",
 
     price: "99€",
     description: "5 AI photoshoots, can be used for multiple persons",
