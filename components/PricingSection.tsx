@@ -52,7 +52,7 @@ export default function PricingSection() {
 
 const pricingOptions = [
   {
-    title: "1 Credit",
+    title: "1 magazine-style AI photoshoot",
 
     price: "29€",
     description: "1 AI photoshoot for 1 person.",

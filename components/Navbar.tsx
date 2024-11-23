@@ -156,7 +156,7 @@ export default async function Navbar() {
                       <SheetClose asChild>
                         {!user && (
                           <Link href="/login" className="pl-4 pt-4">
-                            <Button className="bg-purple-600 hover:bg-purple-700 pl-4">
+                            <Button className="bg-blue-600 hover:bg-blue-500 pl-4">
                               Login / Register
                             </Button>
                           </Link>
