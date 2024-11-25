@@ -2,4 +2,4 @@ User-Agent: *
 Allow: /
 Disallow: /private/
 
-Sitemap: https://www.aifotosessie.nl/sitemap.xml
+Sitemap: https://www.photoshoot4u.com/sitemap.xml
