@@ -6,7 +6,7 @@ export default function ExplainerSection() {
   return (
     <div
       id="How"
-      className="w-full scroll-smooth max-w-6xl mt-16 border-2 border-white  p-8 bg-black rounded-lg space-y-8">
+      className="w-full scroll-smooth max-w-6xl mt-16 border-2 border-white  p-8 bg-black rounded-lg ">
       {/* Step 1: Upload your images */}{" "}
       <h2 className="text-3xl  font-bold text-center mb-8">
         How does it work?

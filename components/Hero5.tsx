@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Gallery from "./gallery";
 
 export default () => {
   const [state, setState] = useState(false);
@@ -36,7 +37,8 @@ export default () => {
               </button>
             </Link>
           </p>
-        </div>
+        </div>{" "}
+        <div></div>
       </section>
     </>
   );
