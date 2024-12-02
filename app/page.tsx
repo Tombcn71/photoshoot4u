@@ -38,7 +38,7 @@ export default async function Index() {
       <div className="bg-black">
         {" "}
         <Gallery />
-        <div className="pl-24">
+        <div className="">
           <ExplainerSection />
           <Faqslist />
           <PricingSection />
