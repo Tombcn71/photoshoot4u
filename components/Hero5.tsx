@@ -20,12 +20,12 @@ export default () => {
     <>
       <section className="mt-14 mx-auto max-w-screen-xl pb-4 px-4 sm:px-8">
         <div className="text-center pb-4 space-y-4">
-          <h1 className="text-white font-bold text-5xl md:text-6xl">
-            Create Magazine-style <br /> photoshoots with AI
-          </h1>
-          <p className="text-gray-400 max-w-xl text-lg mx-auto leading-relaxed">
+          <h2 className="text-4xl text-white font-extrabold mx-auto md:text-5xl">
+            Create magazine-style photoshoots with A.I.{" "}
+          </h2>
+          <p className="max-w-2xl mx-auto text-gray-400">
             Upload selfies and do a magazine-style photoshoot from your phone or
-            laptop safe time and money no need paying an expensive photographer
+            laptop safe time and money no need paying an expensive photographer{" "}
           </p>
         </div>
         <div>
