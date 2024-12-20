@@ -25,8 +25,7 @@ export default async function Index() {
   return (
     <>
       {" "}
-      <Hero5 /> <Gallery /> <ExplainerSection /> <Faqslist />
-      <PricingSection />
+      <h1 className="text-6xl	">COMING SOON</h1>
     </>
   );
 }

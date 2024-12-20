@@ -102,21 +102,24 @@ export const Login = ({
     <>
       {" "}
       <div className="flex items-center p-20 justify-center ">
-        <div className="flex flex-col  border-8 border-white  p-4 rounded-xl max-w-md  w-full ">
+        <div className="  border-8 border-white  p-4 rounded-xl max-w-md  w-full ">
           <h1 className="text-base font-semibold	">
             <div className=" text-5xl">✨</div>Login/Register
           </h1>
           <p className=" opacity-60">Login or register. </p>
           <p className="font-semibold	">e-mail</p>
-          {/* <Button
-            onClick={signInWithGoogle}
-            variant={"outline"}
-            className="font-semibold"
-          >
-            <AiOutlineGoogle size={20} />
-            Continue with Google
-          </Button>
-          <OR /> */}
+          {
+            <>
+              <Button
+                onClick={signInWithGoogle}
+                variant={"outline"}
+                className="font-semibold p-8">
+                <AiOutlineGoogle size={20} />
+                Continue with Google
+              </Button>
+              <OR />
+            </>
+          }
 
           <form
             onSubmit={handleSubmit(onSubmit)}
